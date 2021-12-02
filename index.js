@@ -53,21 +53,26 @@ function writeCookie(cookie) {
   })
 }
 
+if (process.argv.length < 3) {
+  program.help()
+}
+
 program
-  .command('init <cookie>')
   .description('set a cookie')
+  .command('init <cookie>')
   .action((cookie) => {
     writeCookie(cookie)
   })
 
 program
+  .description('An application for publish cnblogs 闪存')
   .arguments('<content>')
   .option('-p, --private', 'private post')
   .option('-c, --cookie <cookie>', 'set cookie string')
   .action((content, options, command) => {
     CONTENT.publicFlag = options.private ? 0 : 1
     CONTENT.content = content
-    let cookie = readCookie()
+    const cookie = readCookie()
     if (options.cookie) {
       cookie = options.cookie
       writeCookie(cookie)
