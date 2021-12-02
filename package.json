@@ -1,0 +1,26 @@
+{
+  "name": "cing",
+  "version": "1.0.1",
+  "description": "命令行形式发送博客园（cnblogs）闪存",
+  "main": "index.js",
+  "bin": "./index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fwindpeak/cing.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fwindpeak/cing/issues"
+  },
+  "homepage": "https://github.com/fwindpeak/cing#readme",
+  "dependencies": {
+    "commander": "^8.3.0",
+    "got": "^11.8.2"
+  }
+}
